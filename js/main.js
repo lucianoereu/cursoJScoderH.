@@ -1,5 +1,6 @@
 //funciones
 function verificar(parametro) {
+    
     let añoUsuario= Number (prompt('ingrese año de nacimiento'));
     //console.log(typeof(añoUsuario));
     while(isNaN(añoUsuario)){
@@ -11,7 +12,8 @@ function verificar(parametro) {
   return anoNacimiento=añoUsuario;
 };
 
-function edad(añoNacimiento,anoActual){
+function edad(añoNacimiento){
+    const anoActual = 2022;
     let edad = anoActual - añoNacimiento;
     return edad;
 };
@@ -23,7 +25,8 @@ if(edadUsuario >= 18){
     console.log(nombre + ' ' + 'no eres mayor de edad, no puedes votar')
 };
 };
-function validar(usurio,password){
+function validar(usurio,pass){
+    let contador= 0;
 do{
     usuario = prompt('ingrese el usuario correspondiente');
     let password = prompt('ingrese contraseña');
@@ -46,8 +49,7 @@ let anoNacimiento;
 let pass = 1234;
 let user = 'lu';
 let usuario;
-let contador= 0;
-const anoActual = 2022;
+
 
 nombre = prompt ('ingrese su nombre ');
 verificar(anoNacimiento);
@@ -58,4 +60,4 @@ verificar(anoNacimiento);
 let edadUsuario= edad(anoNacimiento,2022);
 console.log(nombre + ' tu edad es ' + edadUsuario);
 votar(edadUsuario);
-validar();
+validar(user,pass);
