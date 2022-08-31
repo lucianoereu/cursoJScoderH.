@@ -36,7 +36,6 @@ do{
         usuario=user;
     }
     contador++
-
 } while(user!=usuario && contador < 3)
 
 if (contador==3){
@@ -61,3 +60,31 @@ let edadUsuario= edad(anoNacimiento,2022);
 console.log(nombre + ' tu edad es ' + edadUsuario);
 votar(edadUsuario);
 validar(user,pass);
+
+//array de objetos
+
+const productos = [
+    {id:1,
+    producto: 'pasta',
+    cantidad:500
+    },
+    {
+        id:2,
+        producto: 'arroz',
+        cantidad: 300
+    }
+];
+
+
+class Producto {
+    constructor(nombre, cantidad) {
+        this.nombre  = nombre.toUpperCase();
+        this.cantidad = cantidad;
+    }
+}
+
+let productoNuevo= prompt('agrega un nuevo producto');
+let cantidadNueva=prompt('que cantidad de '+ productoNuevo +' vas a ingresar?')
+productos.push(new Producto(productoNuevo,cantidadNueva));
+
+console.log('tienes '+ productos.length+ ' productos en tu alacena');
